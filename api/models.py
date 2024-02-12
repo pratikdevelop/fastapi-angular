@@ -20,3 +20,11 @@ class Item(Base):
     id = Column(Integer, primary_key=True)
     todo_name = Column(String, index=True)
     todo_description = Column(String, index=True)
+    todo_image = Column(String)
+
+
+class UploadedFile(Base):
+    __tablename__ = 'uploaded_files'
+
+    id = Column(Integer, primary_key=True)
+    file_name = Column(String)
